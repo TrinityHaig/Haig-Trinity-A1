@@ -22,22 +22,19 @@
                     //strawberry cake path
                     if (cakeFlavour == "strawberry")
                     {
-                        Console.WriteLine("\nYou have chosen");
-                        Console.WriteLine(cakeFlavour);
+                        Console.WriteLine($"\nYou have chosen {cakeFlavour}");
                         Console.WriteLine("Which of the following ingredients is NOT needed for the recipe?\n");
                         //Design the cake in this scenario i dont have it planned out just yet
                     }
                     else if (cakeFlavour == "cheesecake")
                     {
-                        Console.WriteLine("\nYou have chosen");
-                        Console.WriteLine(cakeFlavour);
+                        Console.WriteLine($"\nYou have chosen{cakeFlavour}");
                         Console.WriteLine("Which of the following ingredients is NOT needed for the recipe?\n");
                     }
 
                     else if (cakeFlavour == "ice cream")
                     {
-                        Console.WriteLine("\nYou have chosen");
-                        Console.WriteLine(cakeFlavour);
+                        Console.WriteLine($"\nYou have chosen{cakeFlavour}");
                         Console.WriteLine("Which of the following ingredients is NOT needed for the recipe?\n");
                     }
 
