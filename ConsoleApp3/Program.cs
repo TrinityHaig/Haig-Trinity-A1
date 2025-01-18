@@ -90,17 +90,130 @@
                     //comment is here so i can easily see where the next flavour starts
                     else if (cakeFlavour == "cheesecake")
                     {
-                        Console.WriteLine($"\nYou have chosen{cakeFlavour}");
+                        Console.WriteLine($"\nYou have chosen {cakeFlavour}");
                         Console.WriteLine("Which of the following ingredients is NOT needed for the recipe?\n");
+                        //Design the cake in this scenario i dont have it planned out just yet
+                        Console.WriteLine("Egg\nSugar\nCream Cheese\nOlive Oil\n");
+                        incorrectIngredient = Console.ReadLine();
+                        //this is going to get really long oh my lordy
+                        //after it checks for ingredient it should continue linearly
+                        if (incorrectIngredient == "egg")
+                        {
+                            doesCakeHaveMistakes = true;
+                        }
+                        else if (incorrectIngredient == "sugar")
+                        {
+                            doesCakeHaveMistakes = true;
+                        }
+                        else if (incorrectIngredient == "cream cheese")
+                        {
+                            doesCakeHaveMistakes = true;
+                        }
+                        else if (incorrectIngredient == "Olive Oil")
+                        {
+                            doesCakeHaveMistakes = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("I did not understand the answer, this will cause issues with the cake");
+                            doesCakeHaveMistakes = true;
+                        }
+                        //question two, will have to parse answer into a number
+
+                        Console.WriteLine($"You chose {incorrectIngredient}");
+                        Console.WriteLine("\nNEXT QUESTION.\n How long should the oven be preheated to?\n");
+                        ovenTimer = int.Parse(Console.ReadLine());
+                        if (ovenTimer == 350)
+                        {
+                            isCakeHeatedEnough = true;
+                        }
+                        else
+                        {
+                            isCakeHeatedEnough = false;
+                        }
+                        //question 3 was cut but this will be the ending depending on if there was mistakes or not
+                        Console.WriteLine($"You chose{ovenTimer}");
+                        if (doesCakeHaveMistakes == true)
+                        {
+                            Console.WriteLine("Unfortunately your cake had a mistake in it!\n better luck next time");
+                        }
+                        else
+                        {
+                            if (isCakeHeatedEnough == false)
+                            {
+                                Console.WriteLine("Unfortunately your cake had a mistake in it!\n better luck next time");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Congrats! You sucessfully made a cake with no mistakes!");
+                            }
+
+                        }
                     }
 
 
                     //third flavour here
                     else if (cakeFlavour == "ice cream")
                     {
-                        Console.WriteLine($"\nYou have chosen{cakeFlavour}");
+                        Console.WriteLine($"\nYou have chosen {cakeFlavour}");
                         Console.WriteLine("Which of the following ingredients is NOT needed for the recipe?\n");
-                    }
+                        //Design the cake in this scenario i dont have it planned out just yet
+                        Console.WriteLine("Egg\nCake Mix\nIce cream\nSalt\n");
+                        incorrectIngredient = Console.ReadLine();
+                        //this is going to get really long oh my lordy
+                        //after it checks for ingredient it should continue linearly
+                        if (incorrectIngredient == "egg")
+                        {
+                            doesCakeHaveMistakes = true;
+                        }
+                        else if (incorrectIngredient == "cake mix")
+                        {
+                            doesCakeHaveMistakes = true;
+                        }
+                        else if (incorrectIngredient == "ice cream")
+                        {
+                            doesCakeHaveMistakes = true;
+                        }
+                        else if (incorrectIngredient == "salt")
+                        {
+                            doesCakeHaveMistakes = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("I did not understand the answer, this will cause issues with the cake");
+                            doesCakeHaveMistakes = true;
+                        }
+                        //question two, will have to parse answer into a number
+
+                        Console.WriteLine($"You chose {incorrectIngredient}");
+                        Console.WriteLine("\nNEXT QUESTION.\n How long should the cake be in the freezer for (In hours?\n 1\n5\n10");
+                        ovenTimer = int.Parse(Console.ReadLine());
+                        if (ovenTimer == 1)
+                        {
+                            isCakeHeatedEnough = true;
+                        }
+                        else
+                        {
+                            isCakeHeatedEnough = false;
+                        }
+                        //question 3 was cut but this will be the ending depending on if there was mistakes or not
+                        Console.WriteLine($"You chose{ovenTimer}");
+                        if (doesCakeHaveMistakes == true)
+                        {
+                            Console.WriteLine("Unfortunately your cake had a mistake in it!\n better luck next time");
+                        }
+                        else
+                        {
+                            if (isCakeHeatedEnough == false)
+                            {
+                                Console.WriteLine("Unfortunately your cake had a mistake in it!\n better luck next time");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Congrats! You sucessfully made a cake with no mistakes!");
+                            }
+
+                        }
 
                     else
                     {
