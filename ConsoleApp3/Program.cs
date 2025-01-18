@@ -8,11 +8,12 @@
                 //incorrectIngredient is used multipletimes so its beind defined up here
 
                 string incorrectIngredient;
-                
+                int ovenTimer;
                 Console.WriteLine("Welcome! Todays menu item is [CAKE]. Would you like to try and make one?\n\nYes\nNo");
                 string choice1 = Console.ReadLine();
                 //if the cake has any errors it will give you a fail screen at the end.
-                bool doesCakeHaveMistakes = false;
+                bool doesCakeHaveMistakes;
+                bool isCakeHeatedEnough;
                 //end if they type no
                 if (choice1 == "yes")
                 {
@@ -51,6 +52,37 @@
                         {
                             Console.WriteLine("I did not understand the answer, this will cause issues with the cake");
                             doesCakeHaveMistakes = true;
+                        }
+                        //question two, will have to parse answer into a number
+
+                        Console.WriteLine($"You chose {incorrectIngredient}");
+                        Console.WriteLine("\nNEXT QUESTION.\n How long should the oven be preheated to?\n");
+                        ovenTimer = int.Parse( Console.ReadLine() );
+                        if (ovenTimer == 350)
+                        {
+                            isCakeHeatedEnough= true;
+                        }
+                        else
+                        {
+                            isCakeHeatedEnough = false;
+                        }
+                        //question 3 was cut but this will be the ending depending on if there was mistakes or not
+                        Console.WriteLine($"You chose{ovenTimer}");
+                        if (doesCakeHaveMistakes == true)
+                        {
+                            Console.WriteLine("Unfortunately your cake had a mistake in it!\n better luck next time");
+                        }
+                        else
+                        {
+                            if (isCakeHeatedEnough == false)
+                            {
+                                Console.WriteLine("Unfortunately your cake had a mistake in it!\n better luck next time");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Congrats! You sucessfully made a cake with no mistakes!");
+                            }
+                           
                         }
                     }
 
